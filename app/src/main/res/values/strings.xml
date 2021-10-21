@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Hello Toasty</string>
+    <integer name="Contador">0</integer>
+</resources>

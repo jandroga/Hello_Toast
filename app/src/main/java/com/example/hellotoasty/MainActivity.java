@@ -15,6 +15,13 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonReset;
     private TextView txv;//TextView on hi ha el "0" inicial que després canviam
 
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("Counter", Contador);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 Contador = 0;//Contador a 0
                 txv.setText(Integer.toString(Contador));
             }
+
         });
+
 
         buttonCounting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,5 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        int Contador = savedInstanceState.getInt("Counter");
     }
 }

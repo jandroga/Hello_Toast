@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#00FFE500"
     android:visibility="visible"
+    android:configChanges="orientation"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -36,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="30"
+            android:background="#FFFFDD00"
             android:baselineAligned="false"
             android:gravity="center"
             android:text="0"
